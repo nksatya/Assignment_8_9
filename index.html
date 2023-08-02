@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Student Registration</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        function checkDetails() {
+            let pass = document.getElementById('password').value;
+            let rePass = document.getElementById('re-password').value;
+            if(pass === rePass){
+                alert('Registration successfull.');
+            }
+            else{
+                alert('Paswords did not match.');
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <div class="m-5">
+            <form onsubmit="checkDetails()">
+                <div class="row mb-3">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="dob" class="col-sm-2 col-form-label">Date Of Birth</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="dob" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="dob" class="col-sm-2 col-form-label">Gender</label>
+                    <div class="col-sm-10">
+                        <input type="radio" name="gender" class="form-check-input" id="male" style="margin-left: auto;" required>
+                        <label for="dob"
+                            class="form-check-label">&nbsp;&nbsp;&nbsp;&nbsp;Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="radio" name="gender" class="form-check-input" id="female" required>
+                        <label for="dob" class="form-check-label">Female</label>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="dob" class="col-sm-2 col-form-label">Email id</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="dob" class="col-sm-2 col-form-label">Mobile Number</label>
+                    <div class="col-sm-10">
+                        <input type="tel" class="form-control" id="mobile" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="dob" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="dob" class="col-sm-2 col-form-label">Re-Enter Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="re-password" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-light">Register</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
